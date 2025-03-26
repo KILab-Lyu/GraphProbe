@@ -1,0 +1,15 @@
+data is enzymes
+task is inductive
+GE_Model is Chebyshev
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:2
+21
+64
+epoch:0 acc_train:0.1667 loss_train:2.13 acc_val:0.1417 val_loss:2.033
+epoch:100 acc_train:0.3333 loss_train:1.561 acc_val:0.4083 val_loss:1.72
+epoch:200 acc_train:0.5056 loss_train:1.299 acc_val:0.475 val_loss:1.958
+best epoch:47, stop reason:early stop
+{'acc': 0.45, 'f1': 0.15}
+=======================================================================================

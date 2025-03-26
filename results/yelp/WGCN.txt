@@ -1,0 +1,16 @@
+data is yelp
+task is inductive
+GE_Model is WGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+epoch:0 auc_train:0.4999 loss_train:2.377e-05 auc_val:0.4997 val_loss:4.33e-06
+epoch:100 auc_train:0.5117 loss_train:-0.003375 auc_val:0.5031 val_loss:-0.000967
+epoch:200 auc_train:0.5156 loss_train:-0.007266 auc_val:0.5045 val_loss:-0.002206
+epoch:300 auc_train:0.5175 loss_train:-0.009619 auc_val:0.5044 val_loss:-0.002549
+epoch:400 auc_train:0.5178 loss_train:-0.0108 auc_val:0.5045 val_loss:-0.002791
+best epoch:478, stop reason:max epoch
+{'auc': 0.5059843877041486, 'f1': 0.4999281425767359, 'recall': 0.5050549799671709, 'precision': 0.5052711432559777, 'ap': 0.5025487396204964}
+=======================================================================================

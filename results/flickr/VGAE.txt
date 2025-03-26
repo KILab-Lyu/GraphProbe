@@ -1,0 +1,15 @@
+data is flickr
+task is inductive
+GE_Model is VGAE
+downstreamTask is NodeClassifyTask
+feature use meta
+embedding dim is 64
+device is cuda:4
+500
+64
+epoch:0 f1_train:0.401 loss_train:1.918 f1_val:0.4385 loss_val:1.878
+epoch:200 f1_train:0.4637 loss_train:1.473 f1_val:0.4672 loss_val:1.472
+epoch:400 f1_train:0.4913 loss_train:1.4 f1_val:0.4659 loss_val:1.493
+best epoch:230, stop reason:early stop
+{'acc': 0.47670506677541036, 'f1': 0.47670506677541036}
+=======================================================================================

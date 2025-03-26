@@ -1,0 +1,16 @@
+data is amazon
+task is inductive
+GE_Model is GCNGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+device is cuda:3
+Now is GE_model with GCN methods
+epoch:0 auc_train:0.6587 loss_train:-0.01339 auc_val:0.7725 val_loss:-0.02788
+epoch:100 auc_train:0.8197 loss_train:-0.1995 auc_val:0.8149 val_loss:-0.1865
+epoch:200 auc_train:0.846 loss_train:-0.2133 auc_val:0.8391 val_loss:-0.1989
+epoch:300 auc_train:0.8547 loss_train:-0.219 auc_val:0.848 val_loss:-0.2035
+epoch:400 auc_train:0.8602 loss_train:-0.2231 auc_val:0.854 val_loss:-0.207
+best epoch:496, stop reason:max epoch
+{'auc': 0.911271280535618, 'f1': 0.7189273288491209, 'recall': 0.7338073301168401, 'precision': 0.7966195441171781, 'ap': 0.6543415758585227}
+=======================================================================================

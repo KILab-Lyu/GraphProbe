@@ -1,0 +1,10 @@
+data is movielens
+task is inductive
+GE_Model is LightGCL
+downstreamTask is LinkPredTask
+feature use meta
+embedding dim is 64
+device is cuda:0
+404
+64
+epoch:0 auc_train:0.6317 loss_train:-0.0001057 auc_val:0.8127 val_loss:-0.0001854

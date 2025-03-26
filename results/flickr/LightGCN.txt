@@ -1,0 +1,15 @@
+data is flickr
+task is inductive
+GE_Model is LightGCN
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+500
+64
+epoch:0 f1_train:0.03816 loss_train:1.995 f1_val:0.0401 loss_val:1.983
+epoch:200 f1_train:0.449 loss_train:1.531 f1_val:0.4561 loss_val:1.529
+epoch:400 f1_train:0.4636 loss_train:1.476 f1_val:0.4665 loss_val:1.483
+best epoch:499, stop reason:max epoch
+{'acc': 0.4793556937506372, 'f1': 0.4793556937506372}
+=======================================================================================

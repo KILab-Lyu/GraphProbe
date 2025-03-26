@@ -1,0 +1,9 @@
+data is movielens
+task is inductive
+GE_Model is GraphRNN
+downstreamTask is LinkPredTask
+feature use meta
+embedding dim is 64
+device is cuda:2
+404
+64

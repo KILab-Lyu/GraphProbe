@@ -1,0 +1,15 @@
+data is cora
+task is transductive
+GE_Model is MLP
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+1433
+64
+epoch:0 acc_train:0.1429 loss_train:1.948 acc_val:0.058 val_loss:1.962
+epoch:100 acc_train:1.0 loss_train:0.008539 acc_val:0.534 val_loss:1.46
+epoch:200 acc_train:1.0 loss_train:0.002519 acc_val:0.552 val_loss:1.477
+best epoch:75, stop reason:early stop
+{'accuracy': 0.531, 'f1': 0.5238475118528158, 'recall': 0.5640936439368387, 'precision': 0.5200168984766148}
+=======================================================================================

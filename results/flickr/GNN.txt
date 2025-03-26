@@ -1,0 +1,16 @@
+data is yelp
+task is inductive
+GE_Model is VGAE-GNN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+{'auc': 0.6982927923414619, 'f1': 0.6355947108635494, 'recall': 0.6685828759023598, 'precision': 0.7642796164788477, 'ap': 0.6020346377706165}
+=======================================================================================
+movielens LinkPredTask 64 VGAE-GNN {'betweenC': 0.3850681536555143, 'eigenC': 0.49070631970260226}
+flickr LinkPredTask 64 VGAE-GNN {'betweenC': 0.689266106442577, 'eigenC': 0.3474733893557423}
+yelp LinkPredTask 64 VGAE-GNN {'betweenC': 0.5654012275517163, 'eigenC': 0.5345589906796999}
+movielens LinkPredTask 64 VGAE-GNN 4.93809592598266
+flickr LinkPredTask 64 VGAE-GNN 5006.390792978215
+yelp LinkPredTask 64 VGAE-GNN 7.196705040392827

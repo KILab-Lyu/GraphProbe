@@ -1,0 +1,9 @@
+data is flickr
+task is inductive
+GE_Model is GCL
+downstreamTask is NodeClassifyTask
+feature use meta
+embedding dim is 64
+device is cuda:4
+500
+64

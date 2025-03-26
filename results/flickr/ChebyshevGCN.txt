@@ -1,0 +1,15 @@
+data is yelp
+task is inductive
+GE_Model is ChebyshevGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+Now is GE_model with GCN methods
+epoch:0 auc_train:0.6026 loss_train:-0.02256 auc_val:0.7199 val_loss:-0.02783
+epoch:100 auc_train:0.6651 loss_train:-0.1208 auc_val:0.7234 val_loss:-0.1452
+epoch:200 auc_train:0.664 loss_train:-0.1244 auc_val:0.7196 val_loss:-0.1478
+epoch:300 auc_train:0.6615 loss_train:-0.1249 auc_val:0.7159 val_loss:-0.1498
+epoch:400 auc_train:0.6605 loss_train:-0.1263 auc_val:0.7103 val_loss:-0.1494
+best epoch:409, stop reason:max epoch
+{'auc': 0.7113751886260663, 'f1': 0.6439975589959837, 'recall': 0.6528778438674833, 'precision': 0.6698223432520447, 'ap': 0.5942001934544004}
+=======================================================================================

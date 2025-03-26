@@ -1,0 +1,13 @@
+data is flickr
+task is inductive
+GE_Model is LightGCNGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+Now is GE_model with GCN methods
+epoch:0 auc_train:0.8864 loss_train:-0.006949 auc_val:0.9939 val_loss:-0.007893
+epoch:100 auc_train:0.8143 loss_train:-0.2421 auc_val:0.8604 val_loss:-0.2469
+epoch:200 auc_train:0.8038 loss_train:-0.2501 auc_val:0.8369 val_loss:-0.2454
+best epoch:65, stop reason:early stop
+{'auc': 0.8430578512396694, 'f1': 0.744247768199864, 'recall': 0.759090909090909, 'precision': 0.8374233128834356, 'ap': 0.6748466257668712}
+=======================================================================================

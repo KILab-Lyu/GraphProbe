@@ -1,0 +1,17 @@
+data is movielens
+task is inductive
+GE_Model is Chebyshev
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+device is cuda:0
+404
+64
+epoch:0 auc_train:0.4228 loss_train:7.957e-05 auc_val:0.5704 val_loss:-3.174e-05
+epoch:100 auc_train:0.7626 loss_train:-0.1549 auc_val:0.6964 val_loss:-0.1317
+epoch:200 auc_train:0.7814 loss_train:-0.1751 auc_val:0.7125 val_loss:-0.1405
+epoch:300 auc_train:0.7773 loss_train:-0.1869 auc_val:0.7281 val_loss:-0.1639
+epoch:400 auc_train:0.7691 loss_train:-0.1994 auc_val:0.7246 val_loss:-0.1757
+best epoch:494, stop reason:max epoch
+{'auc': 0.682149881243521, 'f1': 0.6157662079107352, 'recall': 0.6258849155926666, 'precision': 0.6407068438112256, 'ap': 0.5749064414832614}
+=======================================================================================

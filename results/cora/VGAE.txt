@@ -1,0 +1,15 @@
+data is cora
+task is transductive
+GE_Model is VGAE
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+1433
+64
+epoch:0 acc_train:0.15 loss_train:1.949 acc_val:0.146 val_loss:1.984
+epoch:100 acc_train:1.0 loss_train:0.026 acc_val:0.76 val_loss:0.7473
+epoch:200 acc_train:1.0 loss_train:0.005104 acc_val:0.766 val_loss:0.8139
+best epoch:77, stop reason:early stop
+{'accuracy': 0.788, 'f1': 0.7827170385995907, 'recall': 0.8121378533235765, 'precision': 0.7666479970675982}
+=======================================================================================

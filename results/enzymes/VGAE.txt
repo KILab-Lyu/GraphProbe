@@ -1,0 +1,17 @@
+data is enzymes
+task is inductive
+GE_Model is VGAE
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:2
+21
+64
+epoch:0 acc_train:0.1722 loss_train:2.04 acc_val:0.175 val_loss:1.789
+epoch:100 acc_train:0.3222 loss_train:1.657 acc_val:0.3917 val_loss:1.612
+epoch:200 acc_train:0.4 loss_train:1.465 acc_val:0.4667 val_loss:1.501
+epoch:300 acc_train:0.525 loss_train:1.287 acc_val:0.5083 val_loss:1.347
+epoch:400 acc_train:0.5667 loss_train:1.2 acc_val:0.425 val_loss:1.602
+best epoch:383, stop reason:max epoch
+{'acc': 0.43333333333333335, 'f1': 0.26666666666666666}
+=======================================================================================

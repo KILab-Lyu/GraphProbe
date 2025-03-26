@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="57287bc2-87a3-403d-81a0-3c5aaee010fc" name="GNNProbe-main">
+        <fileTransfer accessType="SFTP" host="172.20.15.66" port="3657" sshConfigId="83ce0ebf-744e-4858-ae60-3d186d82d11a" sshConfig="myzhao@172.20.15.66:3657 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

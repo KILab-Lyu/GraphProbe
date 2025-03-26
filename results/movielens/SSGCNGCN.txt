@@ -1,0 +1,9 @@
+data is movielens
+task is inductive
+GE_Model is SSGCNGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+Now is GE_model with GCN methods
+{'auc': 0.7147940492827444, 'f1': 0.5606880469758376, 'recall': 0.6063713922671992, 'precision': 0.6821283193848873, 'ap': 0.5600642699438598}
+=======================================================================================

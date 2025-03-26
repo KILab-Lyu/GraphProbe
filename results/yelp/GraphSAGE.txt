@@ -1,0 +1,10 @@
+data is yelp
+task is inductive
+GE_Model is GraphSAGE
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+{'auc': 0.5416673862825769, 'f1': 0.3333333333333333, 'recall': 0.5, 'precision': 0.25, 'ap': 0.5}
+=======================================================================================

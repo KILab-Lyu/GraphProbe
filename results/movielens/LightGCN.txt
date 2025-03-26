@@ -1,0 +1,17 @@
+data is movielens
+task is inductive
+GE_Model is LightGCN
+downstreamTask is LinkPredTask
+feature use meta
+embedding dim is 64
+device is cuda:2
+404
+64
+epoch:0 auc_train:0.5732 loss_train:-2.375e-06 auc_val:0.7699 val_loss:-9.605e-06
+epoch:100 auc_train:0.8332 loss_train:-0.08914 auc_val:0.8461 val_loss:-0.08809
+epoch:200 auc_train:0.8305 loss_train:-0.1397 auc_val:0.8465 val_loss:-0.1407
+epoch:300 auc_train:0.8257 loss_train:-0.1538 auc_val:0.8465 val_loss:-0.1546
+epoch:400 auc_train:0.8233 loss_train:-0.1618 auc_val:0.8423 val_loss:-0.164
+best epoch:481, stop reason:max epoch
+{'auc': 0.8317809853945826, 'f1': 0.6439143223257131, 'recall': 0.6596478489744055, 'precision': 0.6939212274454203, 'ap': 0.5977677306434954}
+=======================================================================================

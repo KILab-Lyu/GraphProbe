@@ -1,0 +1,15 @@
+data is flickr
+task is inductive
+GE_Model is Chebyshev
+downstreamTask is NodeClassifyTask
+feature use meta
+embedding dim is 64
+device is cuda:4
+500
+64
+epoch:0 f1_train:0.1224 loss_train:1.968 f1_val:0.1579 loss_val:1.911
+epoch:200 f1_train:0.4768 loss_train:1.448 f1_val:0.4689 loss_val:1.473
+epoch:400 f1_train:0.5179 loss_train:1.317 f1_val:0.4647 loss_val:1.494
+best epoch:216, stop reason:early stop
+{'acc': 0.475736568457539, 'f1': 0.475736568457539}
+=======================================================================================

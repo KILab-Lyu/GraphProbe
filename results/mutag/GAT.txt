@@ -1,0 +1,17 @@
+data is mutag
+task is inductive
+GE_Model is GAT
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:1
+7
+64
+epoch:0 acc_train:0.5714 loss_train:0.6924 acc_val:0.7027 val_loss:0.6099
+epoch:100 acc_train:0.8214 loss_train:0.4368 acc_val:0.8378 val_loss:0.3932
+epoch:200 acc_train:0.8661 loss_train:0.4057 acc_val:0.8108 val_loss:0.3497
+epoch:300 acc_train:0.8839 loss_train:0.4337 acc_val:0.8108 val_loss:0.3449
+epoch:400 acc_train:0.8661 loss_train:0.4101 acc_val:0.7838 val_loss:0.3668
+best epoch:243, stop reason:early stop
+{'acc': 0.8717948717948718, 'f1': 0.8717948717948718}
+=======================================================================================

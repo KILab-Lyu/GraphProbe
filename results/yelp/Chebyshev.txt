@@ -1,0 +1,9 @@
+data is yelp
+task is inductive
+GE_Model is Chebyshev
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+device is cuda:1
+200
+64

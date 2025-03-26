@@ -1,0 +1,17 @@
+data is amazon
+task is inductive
+GE_Model is SGL
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+device is cuda:0
+64
+64
+epoch:0 auc_train:0.5966 loss_train:-0.007956 auc_val:0.7447 val_loss:-0.02954
+epoch:100 auc_train:0.7039 loss_train:-0.1527 auc_val:0.7491 val_loss:-0.1528
+epoch:200 auc_train:0.7163 loss_train:-0.162 auc_val:0.7603 val_loss:-0.1618
+epoch:300 auc_train:0.717 loss_train:-0.1639 auc_val:0.7517 val_loss:-0.1619
+epoch:400 auc_train:0.7092 loss_train:-0.1676 auc_val:0.7294 val_loss:-0.1606
+best epoch:219, stop reason:early stop
+{'auc': 0.7743791329435018, 'f1': 0.6552840096129808, 'recall': 0.672898622333314, 'precision': 0.717317343186271, 'ap': 0.6070359823622957}
+=======================================================================================

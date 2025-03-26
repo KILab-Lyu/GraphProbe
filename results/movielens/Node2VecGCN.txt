@@ -1,0 +1,7 @@
+data is movielens
+task is inductive
+GE_Model is Node2VecGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+Now is GE_model with GCN methods

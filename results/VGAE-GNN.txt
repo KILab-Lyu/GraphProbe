@@ -1,0 +1,10 @@
+data is movielens
+task is inductive
+GE_Model is VGAE-GNN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+{'auc': 0.6208252566197968, 'f1': 0.5691485301931154, 'recall': 0.5857687420584499, 'precision': 0.6014175850442908, 'ap': 0.5481659728306869}
+=======================================================================================

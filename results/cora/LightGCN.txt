@@ -1,0 +1,17 @@
+data is cora
+task is transductive
+GE_Model is LightGCN
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+1433
+64
+epoch:0 acc_train:0.1357 loss_train:1.949 acc_val:0.064 val_loss:1.946
+epoch:100 acc_train:0.9929 loss_train:0.6777 acc_val:0.762 val_loss:1.327
+epoch:200 acc_train:1.0 loss_train:0.1081 acc_val:0.76 val_loss:0.9361
+epoch:300 acc_train:1.0 loss_train:0.03709 acc_val:0.754 val_loss:0.8635
+epoch:400 acc_train:1.0 loss_train:0.0189 acc_val:0.746 val_loss:0.8421
+best epoch:499, stop reason:max epoch
+{'accuracy': 0.753, 'f1': 0.7445006698786777, 'recall': 0.7726121893510516, 'precision': 0.727114701070663}
+=======================================================================================

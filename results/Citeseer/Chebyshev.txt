@@ -1,0 +1,10 @@
+data is citeseer
+task is transductive
+GE_Model is Chebyshev
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+3703
+64
+epoch:0 acc_train:0.1333 loss_train:1.795 acc_val:0.17 val_loss:1.789

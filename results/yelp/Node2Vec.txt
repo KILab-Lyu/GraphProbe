@@ -1,0 +1,10 @@
+data is yelp
+task is inductive
+GE_Model is Node2Vec
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+{'auc': 0.5016031924397637, 'f1': 0.49677422848128117, 'recall': 0.5013784704449582, 'precision': 0.501430835925291, 'ap': 0.5006908302630854}
+=======================================================================================

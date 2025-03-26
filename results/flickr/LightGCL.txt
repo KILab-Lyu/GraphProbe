@@ -1,0 +1,16 @@
+data is flickr
+task is inductive
+GE_Model is LightGCL
+downstreamTask is LinkPredTask
+feature use meta
+embedding dim is 64
+device is cuda:2
+500
+64
+epoch:0 auc_train:0.5194 loss_train:-0.00568 auc_val:0.53 val_loss:-0.003051
+epoch:100 auc_train:0.7039 loss_train:-0.231 auc_val:0.7429 val_loss:-0.2311
+epoch:200 auc_train:0.7006 loss_train:-0.2409 auc_val:0.7518 val_loss:-0.241
+epoch:300 auc_train:0.702 loss_train:-0.2487 auc_val:0.7476 val_loss:-0.2394
+best epoch:135, stop reason:early stop
+{'auc': 0.7286363636363636, 'f1': 0.7070201795079216, 'recall': 0.7250000000000001, 'precision': 0.7982009364988089, 'ap': 0.6463525835866262}
+=======================================================================================

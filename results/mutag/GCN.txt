@@ -1,0 +1,15 @@
+data is mutag
+task is inductive
+GE_Model is GCN
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+7
+64
+epoch:0 acc_train:0.5446 loss_train:0.7505 acc_val:0.5946 val_loss:0.623
+epoch:100 acc_train:0.8304 loss_train:0.434 acc_val:0.8108 val_loss:0.4624
+epoch:200 acc_train:0.8304 loss_train:0.4049 acc_val:0.8378 val_loss:0.4375
+best epoch:9, stop reason:early stop
+{'acc': 0.8974358974358975}
+=======================================================================================

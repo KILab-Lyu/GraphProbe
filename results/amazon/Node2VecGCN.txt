@@ -1,0 +1,8 @@
+data is amazon
+task is inductive
+GE_Model is Node2VecGCN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+device is cuda:3
+Now is GE_model with GCN methods

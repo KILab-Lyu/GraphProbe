@@ -1,0 +1,10 @@
+data is yelp
+task is inductive
+GE_Model is GIN
+downstreamTask is LinkPredTask
+feature use rand64
+embedding dim is 64
+64
+64
+{'auc': 0.7399239469502037, 'f1': 0.6693694678271767, 'recall': 0.681767477981538, 'precision': 0.7138421596420563, 'ap': 0.6146995624204693}
+=======================================================================================

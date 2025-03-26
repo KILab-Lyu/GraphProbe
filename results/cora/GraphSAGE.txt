@@ -1,0 +1,17 @@
+data is cora
+task is transductive
+GE_Model is GraphSAGE
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+1433
+64
+epoch:0 acc_train:0.1071 loss_train:1.95 acc_val:0.266 val_loss:1.929
+epoch:100 acc_train:1.0 loss_train:0.8883 acc_val:0.76 val_loss:1.189
+epoch:200 acc_train:1.0 loss_train:0.4991 acc_val:0.754 val_loss:0.9624
+epoch:300 acc_train:1.0 loss_train:0.3007 acc_val:0.75 val_loss:0.8739
+epoch:400 acc_train:1.0 loss_train:0.1974 acc_val:0.746 val_loss:0.8913
+best epoch:421, stop reason:max epoch
+{'accuracy': 0.755, 'f1': 0.7521908792630578, 'recall': 0.7826815418201819, 'precision': 0.7362663274201374}
+=======================================================================================

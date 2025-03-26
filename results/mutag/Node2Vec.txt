@@ -1,0 +1,9 @@
+data is mutag
+task is inductive
+GE_Model is Node2Vec
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+7
+64

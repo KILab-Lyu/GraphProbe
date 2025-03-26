@@ -1,0 +1,15 @@
+data is citeseer
+task is transductive
+GE_Model is GCN
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+3703
+64
+epoch:0 acc_train:0.1667 loss_train:1.795 acc_val:0.138 val_loss:1.791
+epoch:100 acc_train:1.0 loss_train:0.01485 acc_val:0.636 val_loss:1.144
+epoch:200 acc_train:1.0 loss_train:0.003125 acc_val:0.65 val_loss:1.253
+best epoch:61, stop reason:early stop
+{'accuracy': 0.652, 'f1': 0.6187248219987477, 'recall': 0.6201725049871034, 'precision': 0.6239524642898482}
+=======================================================================================

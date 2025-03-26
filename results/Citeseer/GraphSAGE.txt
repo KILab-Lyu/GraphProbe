@@ -1,0 +1,17 @@
+data is citeseer
+task is transductive
+GE_Model is GraphSAGE
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+3703
+64
+epoch:0 acc_train:0.1583 loss_train:1.795 acc_val:0.134 val_loss:1.813
+epoch:100 acc_train:1.0 loss_train:0.7571 acc_val:0.664 val_loss:1.227
+epoch:200 acc_train:1.0 loss_train:0.4172 acc_val:0.644 val_loss:1.156
+epoch:300 acc_train:1.0 loss_train:0.251 acc_val:0.662 val_loss:1.131
+epoch:400 acc_train:1.0 loss_train:0.1656 acc_val:0.63 val_loss:1.184
+best epoch:265, stop reason:early stop
+{'accuracy': 0.647, 'f1': 0.6008142070248943, 'recall': 0.6018762997579934, 'precision': 0.6022933626151127}
+=======================================================================================

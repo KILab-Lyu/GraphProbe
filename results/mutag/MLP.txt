@@ -1,0 +1,15 @@
+data is mutag
+task is inductive
+GE_Model is MLP
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:1
+7
+64
+epoch:0 acc_train:0.5714 loss_train:0.7276 acc_val:0.5135 val_loss:1.35
+epoch:100 acc_train:0.8661 loss_train:0.3819 acc_val:0.7838 val_loss:0.492
+epoch:200 acc_train:0.8482 loss_train:0.3666 acc_val:0.8378 val_loss:0.5104
+best epoch:27, stop reason:early stop
+{'acc': 0.7948717948717948, 'f1': 0.7948717948717948}
+=======================================================================================

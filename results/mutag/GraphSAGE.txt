@@ -1,0 +1,15 @@
+data is mutag
+task is inductive
+GE_Model is GraphSAGE
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+7
+64
+epoch:0 acc_train:0.6875 loss_train:0.5894 acc_val:0.7027 val_loss:0.7196
+epoch:100 acc_train:0.8393 loss_train:0.347 acc_val:0.7027 val_loss:0.6889
+epoch:200 acc_train:0.8304 loss_train:0.3573 acc_val:0.7297 val_loss:0.7111
+best epoch:7, stop reason:early stop
+{'acc': 0.8461538461538461}
+=======================================================================================

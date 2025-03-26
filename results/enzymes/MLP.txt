@@ -1,0 +1,17 @@
+data is enzymes
+task is inductive
+GE_Model is MLP
+downstreamTask is GraphClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:2
+21
+64
+epoch:0 acc_train:0.1722 loss_train:1.95 acc_val:0.1833 val_loss:1.879
+epoch:100 acc_train:0.3028 loss_train:1.703 acc_val:0.2833 val_loss:1.67
+epoch:200 acc_train:0.3889 loss_train:1.531 acc_val:0.2833 val_loss:1.663
+epoch:300 acc_train:0.3833 loss_train:1.5 acc_val:0.3833 val_loss:1.66
+epoch:400 acc_train:0.4111 loss_train:1.431 acc_val:0.375 val_loss:1.626
+best epoch:295, stop reason:early stop
+{'acc': 0.375, 'f1': 0.16666666666666666}
+=======================================================================================

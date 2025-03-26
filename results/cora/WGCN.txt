@@ -1,0 +1,9 @@
+data is cora
+task is transductive
+GE_Model is WGCN
+downstreamTask is NodeClassifyTask
+feature use rand64
+embedding dim is 64
+device is cuda:7
+1433
+64
