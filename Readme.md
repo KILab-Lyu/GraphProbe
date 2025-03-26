@@ -10,7 +10,7 @@ We propose a novel framework for probing knowledge in Graph Representation Learn
 
 ---
 
-## ?? Requirements
+## :package: Requirements
 
 The code has been tested with the following package versions:
 
@@ -25,17 +25,17 @@ The code has been tested with the following package versions:
 - `torchvision`: 0.16.0+cu118  
 - `dgl`: 2.3.0+cu118
 
-> ?? Please ensure that you install the exact versions listed above to avoid compatibility issues.
+> :warning: Please ensure that you install the exact versions listed above to avoid compatibility issues.
 
 ---
 
-## ?? Getting Started
+## :rocket: Getting Started
 
 All configurations are defined in `Utility/constant.py`. You can specify the model, dataset, and downstream task by modifying this file.
 
 ---
 
-### ?? Key Configuration Parameters
+### :wrench: Key Configuration Parameters
 
 #### `device`
 Sets the computing device:
@@ -74,7 +74,7 @@ meta_feat = args.meta_emb
 
 ---
 
-### ?? `List_permit_args` – Task Configuration List
+### :file_folder: `List_permit_args` – Task Configuration List
 
 Defines all allowed task settings. Each entry is a dictionary that specifies:
 
@@ -99,25 +99,36 @@ Defines all allowed task settings. Each entry is a dictionary that specifies:
 
 ---
 
-### ?? `Dict_probe_emb` – Probe Feature Dimensions
+### :mag: `Dict_probe_emb` – Probing Task Selection
 
-Defines the embedding dimensions used by different probe types:
+This dictionary defines which downstream tasks (from `List_permit_args`) are used for each probing method.
+
+Each probe (e.g., `CentProbe`, `DistProbe`) maps to a list of indices that correspond to entries in `List_permit_args`. The selected tasks will be evaluated using the specified probe.
+
+For example:
 ```python
 Dict_probe_emb = {
-    'CentProbe':    np.arange(0, 2),
+    'CentProbe':    np.arange(0, 2),  # Apply CentProbe on List_permit_args[0] and List_permit_args[1]
     'DistProbe':    np.arange(0, 2),
     'GstructProbe': np.arange(4, 6),
 }
 ```
 
+In this example:
+- `CentProbe` and `DistProbe` will be applied to the first two tasks in `List_permit_args` (e.g., flickr and ppi).
+- `GstructProbe` will be applied to tasks indexed 4 and 5 (e.g., link prediction or graph classification, depending on what’s uncommented).
+
+To enable additional probes, you can modify or uncomment lines as needed.
+
+
 ---
 
-### ?? Running Experiments
+### :arrow_forward: Running Experiments
 
 1. **Uncomment** the desired configuration in `List_permit_args`.
 2. **Specify** the model(s) in `List_GE_Model`.
 
-#### ? Example
+#### Example
 
 To run inductive node classification on the `ppi` dataset using `GCN`:
 
@@ -147,7 +158,7 @@ python -u main.py
 
 ---
 
-## ?? Citation
+## :bookmark: Citation
 
 If you find this work helpful, please consider citing:
 
@@ -162,4 +173,4 @@ If you find this work helpful, please consider citing:
 
 ---
 
-Happy Probing! ??
+Happy Probing! :dart:
