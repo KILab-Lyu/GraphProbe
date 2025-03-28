@@ -42,16 +42,16 @@ class GNN(torch.nn.Module):
     def __init__(self, in_channels, hidden_channels, out_channels, hid_layers=2):
         super().__init__()
         self.layers = torch.nn.ModuleList()
-        self.layers.append(GraphConv(in_channels, hidden_channels))
+        self.layers.append(GraphConv(in_channels, hidden_channels)) 
         for _ in range(hid_layers - 1):
-            self.layers.append(GraphConv(hidden_channels, hidden_channels))
+            self.layers.append(GraphConv(hidden_channels, hidden_channels)) 
         self.layers.append(GraphConv(hidden_channels, out_channels))
         self.linear = torch.nn.Linear(out_channels, out_channels) 
 
     def forward(self, x, edge_index, edge_attr=None):
         for layer in self.layers:
-            x = layer(x, edge_index, edge_attr) 
-        x = self.linear(x)
+            x = layer(x, edge_index, edge_attr)
+        x = self.linear(x) 
         return x
 
 
@@ -279,8 +279,7 @@ class WGCN(torch.nn.Module):
         else:
             weights = torch.ones_like(deg)
 
-        
-        weights = weights.unsqueeze(1) 
+        weights = weights.unsqueeze(1)
         return weights
 
     def forward(self, x, edge_index, edge_attr=None):
@@ -307,12 +306,9 @@ class LightGCL(torch.nn.Module):
         self.feature_mask_rate = feature_mask_rate
 
         self.encoder = torch.nn.ModuleList()
-       
         self.encoder.append(GraphConv(in_channels, hidden_channels))
-       
         for _ in range(hid_layers - 1):
             self.encoder.append(GraphConv(hidden_channels, hidden_channels))
-      
         self.encoder.append(GraphConv(hidden_channels, out_channels))
 
         self.linear = Linear(out_channels, out_channels)

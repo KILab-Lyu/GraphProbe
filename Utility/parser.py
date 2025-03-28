@@ -16,7 +16,7 @@ def parse_args():
 
 
     parser.add_argument('--ge_model', type=str, default="-1", help='ge_model, no need to use')
-    parser.add_argument('--dataset', type=str, default="yelp", help='dataset')
+    parser.add_argument('--dataset', type=str, default="flickr", help='dataset')
 
     parser.add_argument('--meta_emb', type=bool, default=True, help='meta_emb.')
     parser.add_argument('--test_model', type=str, default="LightGCN", help='dataset')

@@ -27,7 +27,7 @@ def get_memory_usage():
 def get_gpu_memory():
     if torch.cuda.is_available():
         torch.cuda.synchronize() 
-        return torch.cuda.memory_allocated() / 1024 / 1024 
+        return torch.cuda.memory_allocated() / 1024 / 1024
     else:
         return 0
 

@@ -35,8 +35,6 @@ def train_GE_model():
 
 
         for ge in List_GE_Model:
-            if args.ge_test == True:
-                ge = ge + "GCN"
             log_root = os.path.join("results", args.dataset)
             if not os.path.exists(log_root):
                 os.makedirs(log_root)
@@ -96,14 +94,13 @@ def probing(probe, emb, dataset, cutoff):
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--Embedding', type=int, default=0)
-    parser.add_argument('--Probe', type=int, default=0)
-    args = parser.parse_args()
-    # train a graph embedding model GCN GAT//
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--Embedding', type=int, default=0)
+    # parser.add_argument('--Probe', type=int, default=0)
+    # args = parser.parse_args()
     train_GE_model()
 
-    # calculate the probe score
+    #
     train_cal_Probe()
 
 

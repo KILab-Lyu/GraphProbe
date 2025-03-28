@@ -11,7 +11,7 @@ from torch_geometric.nn.models import InnerProductDecoder, VGAE
 # from torch_geometric.nn.kge import
 from torch_geometric.datasets import FB15k_237
 
-from GE_model import GraphRNN, SSL, GCNTest, GCNTest_agg, GNN, WGCN, LightGCL, DeepWalkModel, Node2VecModel, GCL
+from GE_model import GraphRNN, SSL, GCNTest, GNN, WGCN, LightGCL, DeepWalkModel, Node2VecModel, GCL
 
 # from Utility.WGCN import utils_data
 # from Utility.WGCN.utils_structural import load_adj, compute_structural_infot, generate_dijkstra
@@ -71,8 +71,8 @@ def select_GE_model(ge_model, num_node_features, node_emb_dim, device, edge_inde
         GE_model = GCN(in_channels=num_node_features, hidden_channels=256, out_channels=node_emb_dim)
     elif ge_model == 'GCNTest':
         GE_model = GCNTest(in_channels=num_node_features, hidden_channels=256, out_channels=node_emb_dim)
-    elif ge_model == 'GCNTest_agg':
-        GE_model = GCNTest(in_channels=num_node_features, hidden_channels=256, out_channels=node_emb_dim)
+    # elif ge_model == 'GCNTest_agg':
+    #     GE_model = GCNTest(in_channels=num_node_features, hidden_channels=256, out_channels=node_emb_dim)
     elif ge_model == 'GNN':
         GE_model = GNN(in_channels=num_node_features, hidden_channels=256, out_channels=node_emb_dim)
     elif ge_model == 'GraphSAGE':
@@ -360,11 +360,9 @@ class Update_cal:
 
         if 'f1c' in method:
             if self.pred_list.dim() > 1 and self.pred_list.size(1) > 1:
-                # 多分类任务，取预测概率最大的类别
                 pred_classes = torch.argmax(self.pred_list, dim=-1).detach().cpu().numpy()
                 result['f1c'] = f1_score(label_np, pred_classes, average='macro')
             else:
-                # 二分类任务，使用二分类的 F1 分数
                 pred_classes = (self.pred_list > 0.5).astype(int).flatten()
                 result['f1c'] = f1_score(label_np, pred_classes, average='binary')
 
